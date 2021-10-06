@@ -167,6 +167,11 @@ p {
     flex-direction: column;
 }
 
+.listcat {
+    position: relative;
+    width: 90%;
+}
+
 
 /* End Page TYPEOFCATS */
 
