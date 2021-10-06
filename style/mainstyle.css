@@ -81,18 +81,6 @@ a:hover {
 }
 
 
-/* .menu-trigger {
-    display: none;
-    margin-right: 1.5em;
-    background: #a44a3f;
-    color: #fff;
-    padding: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-} */
-
-
 /*конец блока ШАПКА САЙТА*/
 
 
@@ -108,11 +96,13 @@ a:hover {
 }
 
 main {
+    display: flex;
     background-color: #fefae0;
     padding-right: 30vh;
     padding-left: 30vh;
     /* padding-top: 5vh; */
     padding-block: 7vh;
+    flex-direction: column;
 }
 
 h2 {
@@ -123,7 +113,14 @@ p {
     font-weight: 300;
     font-size: 18px;
     line-height: 25px;
-    padding-block-end: 40px;
+    padding-block-end: 30px;
+}
+
+#hystoryP {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 2%;
 }
 
 
