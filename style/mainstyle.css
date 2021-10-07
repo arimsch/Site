@@ -137,17 +137,16 @@ p {
     grid-template-columns: repeat(2, 1fr);
 }
 
-
-/* .services-subtitle {
-    margin: 0;
+.services-subtitle {
+    margin: auto;
     margin-bottom: 20px;
-    max-width: 183px;
+    max-width: 150px;
     font-weight: 500;
     font-size: 24px;
-    line-height: 34px;
+    line-height: 24px;
     text-transform: uppercase;
-    color: #4D533C;
-} */
+    color: #2e3322;
+}
 
 
 /* .services-descr {
@@ -168,7 +167,8 @@ p {
 
 .listcat {
     position: relative;
-    width: 90%;
+    width: 80vh;
+    height: 50vh;
 }
 
 
@@ -260,9 +260,11 @@ p {
         color: #141414;
         padding: 0 20px;
     }
+    /* Для страницы породы */
     .services-list {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
     }
+    /* конец для страницы породы */
 }
