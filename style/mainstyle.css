@@ -18,7 +18,7 @@ section {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 18vh;
     /* box-shadow: 0 5px 15px rgba(0,0,0,.2);  */
@@ -26,7 +26,6 @@ header {
     /* position: fixed; */
     background-image: url("/img/footer-bg.jpg");
     width: 100%;
-    z-index: 100;
 }
 
 .logo img {
@@ -226,13 +225,17 @@ p {
 }
 
 @media screen and (max-width:816px) {
-    .menu-trigger {
+    /* .menu-trigger {
         display: block;
-    }
+    } */
     header {
         display: flex;
         align-items: flex-start;
         height: 65%;
+        line-height: 34px;
+    }
+    .logo img {
+        padding-top: 15vh;
     }
     nav ul {
         display: block;
@@ -256,5 +259,10 @@ p {
         max-width: 90vh;
         color: #141414;
         padding: 0 20px;
+    }
+    .services-list {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
