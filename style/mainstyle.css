@@ -24,7 +24,7 @@ header {
     /* box-shadow: 0 5px 15px rgba(0,0,0,.2);  */
     /* background-color: #868a71; */
     /* position: fixed; */
-    background-image: url("/img/footer-bg.jpg");
+    background-image: url("../img/footer-bg.jpg");
     width: 100%;
 }
 
@@ -148,17 +148,6 @@ p {
     color: #2e3322;
 }
 
-
-/* .services-descr {
-    margin: 0;
-    margin-bottom: 56px;
-    max-width: 194px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 26px;
-    color: rgba(33, 56, 66, 0.6);
-} */
-
 .services-item {
     display: flex;
     align-items: flex-start;
@@ -217,7 +206,7 @@ p {
     padding-top: 50px;
     color: #fff;
     width: 100%;
-    background-image: url("/img/footer-bg.jpg");
+    background-image: url("../img/footer-bg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -1,92 +1,110 @@
 * {
-    box-sizing: border-box; 
-  }
+    box-sizing: border-box;
+}
 
-  body {
+body {
     margin: 0;
     overflow: visible;
-  }
+}
 
-  #main {
+#main {
     display: flex;
     /* min-height: calc(100vh - 40vh); */
     overflow: visible;
     position: relative;
+}
 
-  }
-  #main > article {
+#main>article {
     flex: 1;
     overflow: visible;
-  }
-
-  #main > nav, 
-#main > aside {
-  flex: 0 0 20vw;
-  background: beige;
-	overflow: visible;
 }
-#main > nav {
-  order: -1;
-	overflow: visible;
+
+#main>nav,
+#main>aside {
+    flex: 0 0 20vw;
+    background: beige;
+    overflow: visible;
 }
-header, footer, article, nav, aside {
-  padding: 1em;
-	overflow: visible;
+
+#main>nav {
+    order: -1;
+    overflow: visible;
 }
-header, footer {
-  background: yellowgreen;
-  height: 30vh;
-	overflow: visible;
-}       
 
+header,
+footer,
+article,
+nav,
+aside {
+    padding: 1em;
+    overflow: visible;
+}
 
-  .block-animation {
-          border: none;
-          background: url(/img/Num2/frog1.png);
-          display: block;
-          width: 250px;
-          height: 250px;
-          overflow: visible;
-          }
+header,
+footer {
+    background: yellowgreen;
+    height: 30vh;
+    overflow: visible;
+}
 
-          .frog{
-            position: absolute;
-            top:0px;
-            left: 21em;
-            opacity:0%;
-            border: none;
-            transition: all 2s ease-in-out;
-            -webkit-transition: all 2s ease-in-out; /** Chrome & Safari **/
-            -moz-transition: all 2s ease-in-out; /** Firefox **/
-            -o-transition: all 2s ease-in-out; /** Opera **/
-        }     
+.block-animation {
+    border: none;
+    background: url(../img/Num2/frog1.png);
+    display: block;
+    width: 250px;
+    height: 250px;
+    overflow: visible;
+}
 
-        .princess{
-            position: absolute;
-            top:6em;
-            left:10em;
-            opacity:0%;
-            border: none;
-            transition: all 1s ease-in-out;
-            -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
-            -moz-transition: all 1s ease-in-out; /** Firefox **/
-            -o-transition: all 1s ease-in-out; /** Opera **/
-        }  
-        #princess{          
-        width: 80px;
-        height: auto;
-        }
+.frog {
+    position: absolute;
+    top: 0px;
+    left: 21em;
+    opacity: 0%;
+    border: none;
+    transition: all 2s ease-in-out;
+    -webkit-transition: all 2s ease-in-out;
+    /** Chrome & Safari **/
+    -moz-transition: all 2s ease-in-out;
+    /** Firefox **/
+    -o-transition: all 2s ease-in-out;
+    /** Opera **/
+}
 
-  .block-animation:hover .frog{
-          position: absolute;
-          opacity: 100%;
-          border: none;
-          transform: translate(-50px,0);
-          -webkit-transform: translate(-50px,0); /** Safari & Chrome **/
-          -o-transform: translate(-50px,0); /** Opera **/
-          -moz-transform: translate(-50px,0); /** Firefox **/
-  }
-  .text {
+.princess {
+    position: absolute;
+    top: 6em;
+    left: 10em;
+    opacity: 0%;
+    border: none;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    /** Chrome & Safari **/
+    -moz-transition: all 1s ease-in-out;
+    /** Firefox **/
+    -o-transition: all 1s ease-in-out;
+    /** Opera **/
+}
+
+#princess {
+    width: 80px;
+    height: auto;
+}
+
+.block-animation:hover .frog {
+    position: absolute;
+    opacity: 100%;
+    border: none;
+    transform: translate(-50px, 0);
+    -webkit-transform: translate(-50px, 0);
+    /** Safari & Chrome **/
+    -o-transform: translate(-50px, 0);
+    /** Opera **/
+    -moz-transform: translate(-50px, 0);
+    /** Firefox **/
+}
+
+.text {
     position: absolute;
     top: 2.0em;
     left: 19em;
@@ -96,21 +114,23 @@ header, footer {
     font-weight: 600;
     opacity: 0%;
 }
-.block-animation:hover .text{
-        opacity: 100%;
-        transition: 4s;
+
+.block-animation:hover .text {
+    opacity: 100%;
+    transition: 4s;
 }
 
-.block-animation:active .text{
-    opacity: 0%;
-    transition: .04s;
-}
-.block-animation:active .frog{
+.block-animation:active .text {
     opacity: 0%;
     transition: .04s;
 }
 
-.block-animation:active .princess{
+.block-animation:active .frog {
+    opacity: 0%;
+    transition: .04s;
+}
+
+.block-animation:active .princess {
     overflow: visible;
     opacity: 100%;
     border: none;
@@ -119,6 +139,7 @@ header, footer {
     -o-transform: scale(1.9);
     -moz-transform: scale(1.9);
 }
+
 .text1 {
     position: absolute;
     top: 1.2em;
@@ -129,26 +150,28 @@ header, footer {
     font-weight: 600;
     opacity: 0%;
 }
-.block-animation:active .text1{
+
+.block-animation:active .text1 {
     opacity: 100%;
     transition: 4s;
 }
 
 .block-animation:active {
-    animation:turn 4s infinite;
+    animation: turn 4s infinite;
     animation-delay: 3s;
-    }
-@keyframes turn{
+}
 
-50%{
-    transform: rotate(-180deg);
-    -webkit-transform: rotate(-180deg);
-    -o-transform: rotate(-180deg);
-    -moz-transform: rotate(-180deg);
+@keyframes turn {
+    50% {
+        transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+    }
 }
-}
-    
-  /* .pet{
+
+
+/* .pet{
       position: absolute;
       top:0px;
       left:0px;
