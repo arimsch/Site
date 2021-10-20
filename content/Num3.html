@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/mainstyle.css">
+    <link rel="stylesheet" href="../style/normalize.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <header>
+            <div class="logo">
+                <iframe src="../content/logo.html" scrolling="no" frameborder="none"></iframe>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="content\history.html">История</a></li>
+                    <li><a href="content/typeofcats.html">Породы</a></li>
+                    <li><a href="content/ColorsCat.html">Окрас</a></li>
+                    <li><a href="content/DresCat.html">Дрессировка</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <main>
+        <section>
+            <div>
+                <h2>Введите сторону 1</h2>
+                <input id="a1">
+            </div>
+            <div>
+                <h2>Введите сторону 2</h2>
+                <input id="a2">
+            </div>
+            <div>
+                <h2>Введите сторону 3</h2>
+                <input id="a3">
+            </div>
+            <div style="padding-top: 30px;">
+                <a onclick="pricing()"> Получить результат</a>
+            </div>
+            <div id="res" style="padding-top: 30px;">
+            </div>
+            <div id="resP">
+            </div>
+            <script>
+                function pricing() {
+                    const a = document.getElementById('a1').value;
+                    const b = document.getElementById('a2').value;
+                    const c = document.getElementById('a3').value;
+                    const item = document.getElementById('res');
+                    const itemP = document.getElementById('resP');
+
+                    if ((a <= 0 || a == undefined) || (b <= 0 || b == undefined) || (c <= 0 || c == undefined)) {
+                        img = "<img  SRC='' style='width:300; height:200; padding: 20px;'>"
+                        itemP.innerHTML = img;
+                        res.innerText = 'не все поля заполнены или заполнены не верно. Проверьте данные';
+                    } else {
+                        if (a == b && b == c && a == c) {
+                            img = "<img  SRC='../img/JS/eq3.jpg' style='width:300; height:200; padding: 20px;'>"
+                            itemP.innerHTML = img;
+                            res.innerText = 'равносторонний';
+                        } else {
+                            if (a + b < c || a + c < b || b + c < a) {
+                                img = "<img  SRC='../img/JS/nonex.jpg' style='width:300; height:200; padding: 20px;'>"
+                                itemP.innerHTML = img;
+                                res.innerText = 'не существует';
+                            } else {
+                                if (a == b || b == c || a == c) {
+                                    img = "<img  SRC='../img/JS/eq2.jpg' style='width:300; height:200; padding: 20px;'>"
+                                    itemP.innerHTML = img;
+                                    res.innerText = 'равнобедренный';
+                                } else {
+
+                                    img = "<img  SRC='../img/JS/exist.jpg' style='width:300; height:200; padding: 20px;'>"
+                                    itemP.innerHTML = img;
+                                    res.innerText = 'существует';
+                                }
+                            }
+                        }
+                    }
+                }
+            </script>
+
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-middle">
+                <div class="footer-column">
+                    <h3 class="footer-title"> Задания
+                    </h3>
+                    <ul class="footer-list list-reset">
+                        <li class="footer-item">
+                            <a href="content/Num1/Cat.html" class="footer-link"> Задание 1: рисунок CSS
+                                        </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="content/Num2/prince.html" class="footer-link"> Задание 2: FLEX
+                                                    </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="content/Num3.html" class="footer-link"> Задание 3: JS
+                                                                </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#" class="footer-link"> Задание 4:
+                                                                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+
+</html>
+
+</div>
