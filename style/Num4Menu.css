@@ -6,7 +6,7 @@ article {
     flex-wrap: nowrap;
 }
 
-.sidebar {
+#sidebar {
     order: 1;
     background-color: #fefae0;
     width: 20%;
