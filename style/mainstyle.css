@@ -50,7 +50,7 @@ nav ul {
 .header li,
 a {
     padding: 10px 20px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-decoration: none;
     color: #141414;
     font-weight: 600;

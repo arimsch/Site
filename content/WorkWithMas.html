@@ -34,26 +34,55 @@
         <div class="cont">
             <table>
                 <tr>
-                    <td>
+                    <td width="69%">
                         <h2>Введите слова, используя знак тире для разделения</h2>
-                        <input id="a1">
+                        <input id="start">
                     </td>
-                    <td>
+                    <td valign="bottom">
                         <div id=but>
                             <a onclick="pricing()"> Разобрать</a>
                         </div>
                     </td>
                 </tr>
-
-                <div id="res" style="padding-top: 30px;">
-                </div>
-                <div id="resP">
-                </div>
+                <tr>
+                    <td></td>
+                    <td id="impTD">
+                        <table id="res1"></table>
+                    </td>
+                </tr>
                 <script>
                     function pricing() {
-                        var a = new String(document.getElementById('a1').value);
+                        var i = 1;
+                        var j = 1;
+                        var s;
+                        var a = new String(document.getElementById('start').value);
                         var stringArr = a.split(' ').join('').split("-");
                         stringArr.sort();
+                        let map = new Map();
+                        for (let v of stringArr) {
+                            if (isNaN(v.substring(0, 1))) {
+                                s = "a" + i;
+                                map.set(s, v);
+                                i++;
+                                addElement(s, v);
+                            } else {
+                                s = "n" + i;
+                                map.set(s, v);
+                                j++;
+                                addElement(s, v);
+                            }
+                        }
+
+                        function addElement(s, v) {
+                            var picHolder = document.getElementById("res1");
+                            var ad = document.createElement('tr');
+                            ad.classList.add(s);
+                            picHolder.appendChild(ad);
+                            var adA = document.createElement('a');
+                            ad.appendChild(adA);
+                            adA.innerText = s + " " + v;
+                            //adA.click = pricing();
+                        }
                     }
                 </script>
             </table>
